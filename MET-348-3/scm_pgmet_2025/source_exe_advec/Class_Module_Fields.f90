@@ -32,10 +32,10 @@ MODULE Class_Module_Fields
   INTEGER,PUBLIC, PARAMETER :: unitqmodel=64    
 
   INTEGER                    :: irec_local
-  INTEGER,PUBLIC             :: nLon     = 161
-  INTEGER,PUBLIC             :: nLat     = 161
-  REAL(KIND=r4)              :: InitLon  = 295.0 !0  - 360 
-  REAL(KIND=r4)              :: InitLat  = -50.0 !-90   90
+  INTEGER,PUBLIC             :: nLon     =  93!161
+  INTEGER,PUBLIC             :: nLat     =  61!161
+  REAL(KIND=r4)              :: InitLon  = 302.0 !0  - 360 
+  REAL(KIND=r4)              :: InitLat  = -35.0 !-90   90 
   REAL(KIND=r8)              :: DeltaLon =  0.25
   REAL(KIND=r8)              :: DeltaLat =  0.25
   INTEGER,PUBLIC             :: nLev=37

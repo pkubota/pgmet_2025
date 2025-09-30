@@ -65,6 +65,8 @@ CONTAINS
       !
       !     step loop starts
       !
+      if(idatec(4) == idatef(4) .and. idatec(3) == idatef(3).and.&
+         idatec(2) == idatef(2) .and. idatec(1) == idatef(1)) STOP
       rec=GetRec2ReadWrite(idatei,idatec)
       CALL ReadFields(rec,TimeIncrSeg)
       !CALL Physics
