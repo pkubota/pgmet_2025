@@ -9,15 +9,16 @@ FileName='Temperature'
 'set fwrite  'DirName''FileName'.bin'
 'set gxout fwrite'
 
-it=409
+it=1
 'set t 'it''
 'q time'
 time0=subwrd(result,3)
-while(it<=577)
+
+while(it<=120)
   iz=1
     while(iz<=37)
-      'set y 41  201'
-      'set x 221 381'
+      'set y 1  61'
+      'set x 1  93'
       'd t(t='it',z='iz')'
       iz=iz+1 
     endwhile
@@ -40,9 +41,9 @@ say filename2
      rc=write(filename'.ctl','*OPTIONS  big_endian          '                                                ,append )
      rc=write(filename'.ctl','undef  -99999.0'                                                               ,append )
      rc=write(filename'.ctl','title GPCP MODEL 1.0  degree'                                                   ,append )
-     rc=write(filename'.ctl','xdef   161 linear   -65.0   0.25'                                              ,append )
-     rc=write(filename'.ctl','ydef   161 linear   -50.0   0.25'                                              ,append )
-     rc=write(filename'.ctl','tdef   168  LINEAR  'time0'  1hr'                                                    ,append )
+     rc=write(filename'.ctl','xdef   93 linear   -58   0.25'                                              ,append )
+     rc=write(filename'.ctl','ydef   61 linear   -35   0.25'                                              ,append )
+     rc=write(filename'.ctl','tdef   120  LINEAR  'time0'  1hr'                                                    ,append )
      rc=write(filename'.ctl','zdef    37 levels 1000 975 950 925 900 875 850 825 800 775 '       ,append )
      rc=write(filename'.ctl','                   750 700 650 600 550 500 450 400 350 300 '       ,append )
      rc=write(filename'.ctl','                   250 225 200 175 150 125 100  70  50  30 '       ,append )
