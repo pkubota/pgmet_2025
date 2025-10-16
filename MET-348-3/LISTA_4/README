@@ -1,4 +1,10 @@
-
+use o modelo
+https://github.com/pkubota/pgmet_2025/tree/main/MET-348-3/scm_dynamics_2025
+"obs: As saidas são 3D 37 niveis"
 
 dados para rodar o caso catarina
 https://ftp.cptec.inpe.br/pesquisa/bam/paulo.kubota/externo/MET-348-3/scm_pgmet_2025.tar.gz
+
+
+os resultados da simulação devem ser iguais ao do diretorio:
+https://ftp.cptec.inpe.br/pesquisa/bam/paulo.kubota/externo/MET-348-3/scm_dynamics_2025/dataout/
