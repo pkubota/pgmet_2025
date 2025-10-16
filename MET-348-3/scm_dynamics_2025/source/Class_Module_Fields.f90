@@ -32,10 +32,10 @@ MODULE Class_Module_Fields
   INTEGER,PUBLIC, PARAMETER :: unitqmodel=64    
 
   INTEGER                    :: irec_local
-  INTEGER,PUBLIC             :: nLon     = 161
-  INTEGER,PUBLIC             :: nLat     = 161
-  REAL(KIND=r4)              :: InitLon  = 295.0 !0  - 360 
-  REAL(KIND=r4)              :: InitLat  = -50.0 !-90   90
+  INTEGER,PUBLIC             :: nLon     =  93!161
+  INTEGER,PUBLIC             :: nLat     =  61!161
+  REAL(KIND=r4)              :: InitLon  = 302.0 !0  - 360 
+  REAL(KIND=r4)              :: InitLat  = -35.0 !-90   90 
   REAL(KIND=r8)              :: DeltaLon =  0.25
   REAL(KIND=r8)              :: DeltaLat =  0.25
   INTEGER,PUBLIC             :: nLev=37
@@ -151,38 +151,40 @@ CONTAINS
   INQUIRE(IOLENGTH=lrec2D)var2P_A
   INQUIRE(IOLENGTH=lrec3D)var3U_A
 
-  OPEN(unit=unitzgeo,FILE='GeoPotential.bin',&
+  OPEN(unit=unitzgeo,FILE='../datain/GeoPotential.bin',&
        FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='READ',STATUS='OLD') 
 
-  OPEN(unit=unittemp,FILE='Temperature.bin',&
+  OPEN(unit=unittemp,FILE='../datain/Temperature.bin',&
        FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='READ',STATUS='OLD') 
 
-  OPEN(unit=unitumes,FILE='SpecificHumidy.bin',&
+  OPEN(unit=unitumes,FILE='../datain/SpecificHumidy.bin',&
        FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='READ',STATUS='OLD') 
 
-  OPEN(unit=unituvel,FILE='ZonalWind.bin',&
+  OPEN(unit=unituvel,FILE='../datain/ZonalWind.bin',&
        FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='READ',STATUS='OLD') 
 
-  OPEN(unit=unitvvel,FILE='MeridionalWind.bin',&
+  OPEN(unit=unitvvel,FILE='../datain/MeridionalWind.bin',&
        FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='READ',STATUS='OLD') 
 
-  OPEN(unit=unitomeg,FILE='Omega.bin',&
+  OPEN(unit=unitomeg,FILE='../datain/Omega.bin',&
        FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='READ',STATUS='OLD') 
 
-  OPEN(unit=unitsurp,FILE='SurfacePressure.bin',&
+  OPEN(unit=unitsurp,FILE='../datain/SurfacePressure.bin',&
        FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec2D,ACTION='READ',STATUS='OLD') 
        
 !SAIDAS DO MODELO SAO SALVAS EM:
-  OPEN(unit=unitumodel,FILE='ModelU.bin',&
+  OPEN(unit=unitumodel,FILE='../dataout/ModelU.bin',&
       FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='WRITE',STATUS='UNKNOWN')
       
-  OPEN(unit=unittmodel,FILE='ModelT.bin',&
+  OPEN(unit=unittmodel,FILE='../dataout/ModelT.bin',&
       FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='WRITE',STATUS='UNKNOWN') 
       
-  OPEN(unit=unitmmodel,FILE='ModelM.bin',&
+  OPEN(unit=unitmmodel,FILE='../dataout/ModelM.bin',&
       FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='WRITE',STATUS='UNKNOWN') 
       
-  OPEN(unit=unitqmodel,FILE='ModelQ.bin',&
+!  OPEN(unit=unitqmodel,FILE='ModelQ.bin',&
+!      FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec2D,ACTION='WRITE',STATUS='UNKNOWN')   
+  OPEN(unit=unitqmodel,FILE='../dataout/ModelQ.bin',&
       FORM='UNFORMATTED',ACCESS='DIRECT',RECL=lrec3D,ACTION='WRITE',STATUS='UNKNOWN')   
 
 !!!!!!!!!!!!!!!!!!!!DEFINICAO DA MALHA (QUADRADA)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

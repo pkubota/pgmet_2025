@@ -31,19 +31,19 @@ CONTAINS
  SUBROUTINE Init_Class_Module_TimeManager()
   IMPLICIT NONE
   idatei(1) = 00 
-  idatei(2) = 18 
-  idatei(3) = 04 
-  idatei(4) = 2023 
+  idatei(2) = 24 
+  idatei(3) = 03 
+  idatei(4) = 2004 
   
   idatec(1) = 00 
-  idatec(2) = 18 
-  idatec(3) = 04 
-  idatec(4) = 2023
+  idatec(2) = 24 
+  idatec(3) = 03 
+  idatec(4) = 2004
 
-  idatef(1) = 24 
-  idatef(2) = 18 !24 é o final
-  idatef(3) = 04 
-  idatef(4) = 2023
+  idatef(1) = 23 
+  idatef(2) = 28 !24 é o final
+  idatef(3) = 03 
+  idatef(4) = 2004
 
   DHFCT=24
   !     DT                    90
