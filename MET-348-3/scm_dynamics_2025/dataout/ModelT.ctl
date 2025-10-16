@@ -1,4 +1,4 @@
-dset ^ModelU.bin
+dset ^ModelT.bin
 *OPTIONS  big_endian          
 undef  -99999.0
 title GPCP MODEL 1.0  degree
@@ -10,5 +10,5 @@ zdef    37 levels 1000 975 950 925 900 875 850 825 800 775
                    250 225 200 175 150 125 100  70  50  30 
                     20  10   7   5   3   2   1             
 VARS 1
-uvel    37   99    U component of wind         (m/sec )    
+temp    37   99    Temperature        (K )    
 ENDVARS
