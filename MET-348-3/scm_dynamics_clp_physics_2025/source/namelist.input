@@ -1,0 +1,28 @@
+&TimeControl
+ idatei=00,24,03,2004                ,!
+ idatec=00,24,03,2004                ,!
+ idatef=23,28,03,2004                ,!
+ DHFCT=  24                          ,!
+ dt_step=  180.0                     ,!
+ ICtrDay=  0                         ,!
+/
+&MeshesControl
+ nLon     =  93   !number of longitude !161
+ nLat     =  61   !number of latitude  161
+ InitLon  = 302.0 !initial longitude 0  - 360 
+ InitLat  = -35.0 !initial latitude  -90   90 
+ DeltaLon =  0.25 !resolution x-axis 
+ DeltaLat =  0.25 !resolution y-axis 
+ nLev     = 37    ! number of vertical layers
+ vis    =  2.5e3  ! Coeficiente de difusão para  momentum e temperatura
+ vis_q  =  3.0e4  ! Coeficiente de difusão  para  umidadde
+ taul   =  1800   ! Amortecimento para as forcantes fisicas
+/
+&ForcingControl
+ ForcLW = 1  ,!ForcLW = 1 => on	or ForcLW = 0 => off  LONG WAVE RADIATIVE HEATING
+ ForcSW = 1  ,!ForcSW = 1 => on	or ForcSW = 0 => off  SHORT WAVE RADIATIVE HEATING
+ ForcDC = 0  ,!ForcDC = 1 => on	or ForcDC = 0 => off  CONVECTIVE LATENT HEATING  
+ ForcLG = 1  ,!ForcLG = 1 => on	or ForcLG = 0 => off  LARGE SCALE LATENT HEATING
+ ForcSC = 1  ,!ForcSC = 1 => on	or ForcSC = 0 => off  SHALLOW CONVECTIVE HEATING
+ ForcPB = 1  ,!ForcPB = 1 => on	or ForcPB = 0 => off  VERTICAL DIFFUSION HEATING
+/
